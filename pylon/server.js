@@ -1,14 +1,20 @@
-const webSocketServer = require('websocket').server;
-const http = require('http');
 
-const server = http.createServer();
-server.listen(55455);
-const wsServer = new webSocketServer({ httpServer: server });
+const WebSocket = require('ws');
 
-wsServer.on('request', function (request) {
-    console.log('establishing a new connection with client');
-    var connection = request.accept(null, request.origin);
-    setInterval(() => {
-        connection.sendUTF(new Date().getTime());
-    }, 100);
+const wss = new WebSocket.Server({ port: 3000 });
+
+wss.on('connection', (ws) => {
+  console.log('WebSocket connected');
+
+  // Simulate sending packet latency every 2 seconds
+  const interval = setInterval(() => {
+    const latency = Math.floor(Math.random() * 100); // Random latency value between 0 and 100
+    const message = JSON.stringify({ type: 'latency', data: latency });
+    ws.send(message);
+  }, 2000);
+
+  ws.on('close', () => {
+    console.log('WebSocket disconnected');
+    clearInterval(interval);
+  });
 });
