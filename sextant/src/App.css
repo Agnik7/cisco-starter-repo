@@ -1,3 +1,15 @@
+:root{
+  --Dark-purple: hsl(225, 28%, 13%) ;
+  --Light-Yellow: hsl(60, 100%, 65%);
+  --Deep-blue: hsl(240, 96%, 9%);
+  --Dark-Yellow: hsl(49, 94%, 63%);
+  --Orange-red: hsl(0, 88%, 64%);
+  --White: hsl(0, 0%, 94%);
+}
+body{
+  background-color: var(--Dark-purple);
+}
 .App {
   font-family: Monospace;
+  
 }
