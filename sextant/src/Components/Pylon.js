@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 
