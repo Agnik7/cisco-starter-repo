@@ -3,7 +3,7 @@ import './App.css';
 import Banner from './Components/Banner';
 import Exhibit from './Components/Exhibit';
 import Address from './Components/Address';
-
+import Pylon from './Components/Pylon';
 class App extends Component {
     render() {
         return (
@@ -14,6 +14,9 @@ class App extends Component {
                 </Exhibit>
                 <Exhibit name=" IPv6 Address">
                     <Address url='https://api64.ipify.org?format=json' />
+                </Exhibit>
+                <Exhibit name="Pylon Packet Latency">
+                    <Pylon/>
                 </Exhibit>
             </div>
         );
