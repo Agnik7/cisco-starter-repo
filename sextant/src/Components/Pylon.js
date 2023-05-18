@@ -3,7 +3,7 @@ import ReconnectingWebSocket from 'reconnecting-websocket';
 
 function Pylon() {
   const [latency, setLatency] = useState(null);
-  const endpoint = 'ws://localhost:3000'; // Pylon WebSocket endpoint
+  const endpoint = 'ws://localhost:55455'; // Pylon WebSocket endpoint
 
   useEffect(() => {
     const socket = new ReconnectingWebSocket(endpoint);
