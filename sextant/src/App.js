@@ -1,13 +1,13 @@
 import './App.css';
 import Banner from './Components/Banner';
-import Card from './Components/Card';
+import Exhibit from './Components/Exhibit';
 function App() {
   return (
     <div className="App">
-      <Banner></Banner>
-      <div className="container">
-        <Card></Card>
-      </div>
+      <Banner bannerText="Sextant" />
+      <Exhibit name="I'm an exhibit!"></Exhibit>
+      <Exhibit name="I'm also an exhibit!"></Exhibit>
+      <Exhibit name="Don't forget about me, I'm an exhibit too!"></Exhibit>
     </div>
   );
 }

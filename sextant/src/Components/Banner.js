@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react';
+import './Banner.css';
 
-export default function Banner() {
-  return (
-    <h1>Sextant</h1>
-  )
+class Banner extends Component {
+    render() {
+        return (
+            <div className="Banner">
+                <h1>{this.props.bannerText}</h1>
+            </div>
+        );
+    }
 }
+
+export default Banner;
